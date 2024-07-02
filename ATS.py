@@ -83,6 +83,14 @@ if submit1:
         st.write(response)
     else:
         st.write("Please uplaod the resume")
+elif submit2:
+    if uploaded_file is not None:
+        pdf_content=input_pdf_setup(uploaded_file)
+        response=get_gemini_response(input_prompt2,pdf_content,input_text)
+        st.subheader("The Repsonse is")
+        st.write(response)
+    else:
+        st.write("Please uplaod the resume")
 
 elif submit3:
     if uploaded_file is not None:
