@@ -68,7 +68,7 @@ if submit1:
             response=get_gemini_response(input_prompt1,pdf_content,input_text)
             resume[file.name]=response
         
-        for key,value in resume.items:
+        for key,value in resume.items():
             st.subheader("Details for resume "+key)
             st.write(value)
     else:
