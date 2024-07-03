@@ -64,6 +64,7 @@ if submit1:
     if uploaded_files is not None:
         resume=dict()
         for file in uploaded_files:
+            st.subheader(file)
             pdf_content=input_pdf_setup(file)
             response=get_gemini_response(input_prompt1,pdf_content,input_text)
             resume[file]=response
